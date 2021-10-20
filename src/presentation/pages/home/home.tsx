@@ -86,8 +86,9 @@ export default function Home() {
          
                 ||
                ( step === Step.table &&
-                <div className="form">
+                <div className="table">
                     <Text mb="15px">Historias del sprint</Text>
+                    <Text mb="8px">Total de HU: { issues.length }</Text>
                     <Table variant="simple">
                         <Thead>
                             <Tr>

@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Pre-planning generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pequeño utilitario para extraer las historias de usuario de jira para un proceso de pre planificación puedes usar la herramienta en [Pre-planning](https://ricardo-arana.github.io/pre-planning/).
 
-## Available Scripts
+## Scripts disponibles
 
 In the project directory, you can run:
 

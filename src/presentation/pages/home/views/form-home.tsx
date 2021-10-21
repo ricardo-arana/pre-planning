@@ -13,22 +13,29 @@ export default function FormHomeView({onChange}: any) {
         setValue(inputValue)
     }
 
+    let [error, setError] = useState('');
+
     const handleContinue = () => {
-        const data = JSON.parse(value);
-        const sprintsDto: SprintModel[] = TransforJira.transfor(data);
-        onChange(sprintsDto)
+        try { 
+            const data = JSON.parse(value);
+            const sprintsDto: SprintModel[] = TransforJira.transfor(data);
+            onChange(sprintsDto)
+        } catch (e) {
+            setError('El json ingresado no es valido')
+        }
     }
 
     return (
         <div className="form">
              <Text mb="15px">Ingrese el json de jira:</Text>
-              <Textarea placeholder="Ingresa aqui tu json" rows={10}
+              <Textarea isInvalid={!!error}  placeholder="Ingresa aqui tu json" rows={10}
               value={value}
               onChange={handleValue}
               />
               <Button colorScheme="blue" size="lg" style={ {marginTop: 20}} onClick={handleContinue} >
                 Continuar
             </Button>
+            { error && <Text color="red">{error}</Text>}
           </div>
     );
 }

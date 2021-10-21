@@ -43,7 +43,7 @@ export default function Home() {
                 <SelectSprintHome sprints={sprints} onSelect={handleSelectSprint}/>
               ) ||
               ( step === Step.table &&
-                <TableHome issues={issues}/>
+                <TableHome issues={issues} sprints={sprints}/>
               ) 
           }
         </div>

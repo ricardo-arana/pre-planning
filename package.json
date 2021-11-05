@@ -1,7 +1,7 @@
 {
   "name": "pre-planning",
   "version": "0.1.0",
-  "homepage": "https://ricardo-arana.github.io/pre-planning/",
+  "homepage": "http://planning.ricardo-arana.com/",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^1.6.9",

@@ -23,13 +23,15 @@ export default function TableHome({issues, sprints}: Props) {
                     <Table variant="simple" id="table">
                         <Thead>
                             <Tr>
-                            <Th>HU</Th>
-                            <Th>Nombre HU</Th>
+                            <Th>Tipo</Th>
+                            <Th>Historia</Th>
+                            <Th>Descripción</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
                             { selectedIssues.map(issue => (
                                 <Tr key={ issue.id}>
+                                    <Td><Link href={issue.url}><img src={issue.icon}  alt={issue.type}/></Link></Td>
                                     <Td><Link href={issue.url}>{issue.key}</Link></Td>
                                     <Td>{issue.summary}</Td>
                                 </Tr>

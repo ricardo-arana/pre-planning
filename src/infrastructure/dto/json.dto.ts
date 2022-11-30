@@ -166,7 +166,7 @@ export class TransforJira {
         dto.issues
           .filter((issue) => issuesIds.includes(issue.id))
           .forEach((issue) => {
-            const newIssue = new IssueModel(issue.id, issue.key, issue.summary);
+            const newIssue = new IssueModel(issue.id, issue.key, issue.summary, issue.typeName);
             data.addIssue(newIssue);
           });
 
